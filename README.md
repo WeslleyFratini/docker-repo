@@ -21,12 +21,12 @@ Passo a passo:
 Linux: ifconfig
 Windowns: ipconfig
 
-ip docker 172.17. 0.1 
+ip docker 172.17.0.1 
 </pre>
 <br>
 
 <pre>
-docker swarm init --advertise-addr “ip"
+docker swarm init --advertise-addr 172.17.0.1
 </pre>
 <br>
 
@@ -96,4 +96,8 @@ docker build -t bbnginx:1.0 .
 docker service create --publish 80:80 bbnginx:1.0
 </pre>
 
-docker swarm leave 
+- Para sair do docker swarm
+<pre>
+docker swarm leave -f
+</pre>
+
